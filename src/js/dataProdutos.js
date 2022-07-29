@@ -34,4 +34,36 @@ const produtos = [
         categoria: 'Leite',
         img: './src/img/leite.png'
     }
+    ,
+    {
+        nome: 'Croissant',
+        preco: 4,
+        secao: 'Panificadora',
+        categoria: 'Pães',
+        img: './src/img/croissant.jpeg'
+    }
+    ,
+    {
+        nome: 'Torta Doce',
+        preco: 7,
+        secao: 'Panificadora',
+        categoria: 'Tortas',
+        img: './src/img/tortaDoce.jpg'
+    }
+    ,
+    {
+        nome: 'Requeijão Cremoso',
+        preco: 4,
+        secao: 'Laticínio',
+        categoria: 'Requeijão',
+        img: './src/img/requeijaocrem.webp'
+    }
+    ,
+    {
+        nome: 'Manteiga',
+        preco: 4,
+        secao: 'Laticínio',
+        categoria: 'Manteiga',
+        img: './src/img/manteiga.jpg'
+    }
 ]
