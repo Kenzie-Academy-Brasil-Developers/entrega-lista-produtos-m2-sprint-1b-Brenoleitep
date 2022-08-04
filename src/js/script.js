@@ -1,5 +1,6 @@
 let secaoProdutos = document.querySelector(".secaoProdutos")
 
+
 function listarProdutos(database, secao) {
 
     secao.innerHTML = ""
@@ -15,11 +16,7 @@ function listarProdutos(database, secao) {
 listarProdutos(produtos, secaoProdutos)
 
 function criarCardProduto(produto) {
-    let nome = produto.nome
-    let preco = produto.preco
-    let secao = produto.secao
-    let img = produto.img
-
+    const {nome, preco, secao, img} = produto
 
     let secaoProdutos = document.querySelector(".secaoProdutos")
     let tagLi = document.createElement("li")
@@ -27,15 +24,19 @@ function criarCardProduto(produto) {
     let tagTitulo = document.createElement("h3")
     let tagSpan = document.createElement("span")
     let tagPreco = document.createElement("p")
+    let tagBtn = document.createElement("button")
+    let tagDiv = document.createElement("div")
 
     tagImg.src = img
     tagImg.alt = nome
     tagTitulo.innerText = nome
     tagPreco.innerHTML = `R$${preco}`
     tagSpan.innerText = secao
+    tagBtn.innerText = "Comprar"
 
     secaoProdutos.append(tagLi)
-    tagLi.append(tagImg, tagTitulo, tagSpan, tagPreco)
+    tagLi.append(tagImg, tagTitulo, tagSpan, tagDiv)
+    tagDiv.append(tagPreco, tagBtn)
 
     return tagLi
 }
