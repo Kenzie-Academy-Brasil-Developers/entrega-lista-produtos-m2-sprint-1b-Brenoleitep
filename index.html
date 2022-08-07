@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <link rel="stylesheet" href="./src/css/reset.css" />
-    <link rel="stylesheet" href="./src/css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fontawesome.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <script defer src="./src/js/dataProdutos.js"></script>
-    <script defer src="./src/js/script.js"></script>
-    <title>Lista de Produtos</title>
-  </head>
-  <body>
-    <main>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./src/css/reset.css" />
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fontawesome.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script defer src="./src/js/dataProdutos.js"></script>
+  <script defer src="./src/js/script.js"></script>
+  <script src="./src/js/buscaItens.js"></script>
+  <title>Lista de Produtos</title>
+</head>
+
+<body>
+  <main>
     <!-- CABEÇALHO -->
     <header>
       <h1>Shop now</h1>
     </header>
     <!-- PARTE PRINCIPAL -->
-    <main>
+    <main class="containerGeral">
       <section class="filtersContainer">
         <div id="botoesContainer">
           <button class="estiloGeralBotoes estiloGeralBotoes--filter todosProdutos">Todos Produtos</button>
@@ -41,45 +41,58 @@
         </div>
 
         <div class="containerBuscaPorNome">
-          <input
-            type="text"
-            placeholder="Pesquisar por"
-            class="campoBuscaPorNome"
-          />
-          <button
-            class="estiloGeralBotoes estiloGeralBotoes--botaoBuscaPorNome"
-          >
+          <input type="text" placeholder="Pesquisar por" class="campoBuscaPorNome" />
+          <button class="estiloGeralBotoes estiloGeralBotoes--botaoBuscaPorNome">
             <img src="./src/img/search.png" alt="lupa" />
           </button>
         </div>
       </section>
       <section class="priceContainer">
         <div>
-            <img src="./src/img/alert-circle.png" alt="exclamação de alerta">
-            <p>Valor total dos produtos da seção selecionada</p>
+          <img src="./src/img/alert-circle.png" alt="exclamação de alerta">
+          <p>Valor total dos produtos da seção selecionada</p>
         </div>
         <span class="spanPreco">R$ 0.00</span>
       </section>
       <!-- CONTAINER DE PRODUTOS -->
       <section class="containerVitrine">
         <div class="containerListaProdutos">
-         <ul class="secaoProdutos">
-                    <!-- Utilize esse item html como template para a construção da lista de produtos
+          <ul class="secaoProdutos">
+            <!-- Utilize esse item html como template para a construção da lista de produtos
                     
                     Você pode remover esses comentários depois que fizer a construção pelo DOM -->
-                    
-            
-                    <!-- <li>
+
+
+            <!-- <li>
                         <img src="./src/img/maça.png" alt="Imagem maçã">
                         <h3>Maçã</h3>
                         <span>Hortifruti</span>
                         <p>R$ 2.00</p>
                     </li> -->
-                    
-                </ul>
+
+          </ul>
         </div>
+
+        <section class="carrinho__section">
+
+          <div class="carrinho__titulo">
+            <img src="./src/img/carrinhoImg.png" alt="carrinho">
+            <h2>Carrinho</h2>
+          </div>
+
+          
+
+          <ul class="carrinho__ul">
+            
+          </ul>
+          <div class="carrinho__titulo carrinho__titulo--Info"> 
+            <h2 class="qtdProdutos"></h2>
+            <h2 class="precoTotal"></h2>
+          </div>
+        </section>
       </section>
     </main>
-    
-  </body>
+
+</body>
+
 </html>

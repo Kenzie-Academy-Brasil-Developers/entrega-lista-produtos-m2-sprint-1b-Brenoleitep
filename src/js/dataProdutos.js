@@ -1,6 +1,6 @@
 const produtos = [
     {
-        id: 1,
+        id: 0,
         nome: 'Banana',
         preco: 2,
         secao: 'Hortifruti',
@@ -16,7 +16,7 @@ const produtos = [
         ]
     },
     {
-        id: 2,
+        id: 1,
         nome: 'Croissant',
         preco: 4,
         secao: 'Panificadora',
@@ -24,7 +24,7 @@ const produtos = [
         img: './src/img/croissant.jpeg'
     },
     {
-        id: 3,
+        id: 2,
         nome: 'Maçã',
         preco: 2,
         secao: 'Hortifruti',
@@ -40,7 +40,7 @@ const produtos = [
         ]
     },
     {
-        id: 4,
+        id: 3,
         nome: 'Pão',
         preco: 4,
         secao: 'Panificadora',
@@ -56,7 +56,7 @@ const produtos = [
     }
     ,
     {
-        id: 2,
+        id: 4,
         nome: 'Croissant',
         preco: 4,
         secao: 'Panificadora',
@@ -64,7 +64,7 @@ const produtos = [
         img: './src/img/croissant.jpeg'
     },
     {
-        id: 3,
+        id: 5,
         nome: 'Maçã',
         preco: 2,
         secao: 'Hortifruti',
@@ -80,7 +80,7 @@ const produtos = [
         ]
     },
     {
-        id: 4,
+        id: 6,
         nome: 'Pão',
         preco: 4,
         secao: 'Panificadora',
@@ -95,7 +95,7 @@ const produtos = [
         ]
     },
     {
-        id: 5,
+        id: 7,
         nome: 'Leite',
         preco: 5,
         secao: 'Laticínio',
@@ -110,7 +110,7 @@ const produtos = [
         ]
     },
     {
-        id: 6,
+        id: 8,
         nome: 'Morango',
         preco: 2,
         secao: 'Hortifruti',
@@ -126,7 +126,7 @@ const produtos = [
         ]
     },
     {
-        id: 7,
+        id: 9,
         nome: 'Torta Doce',
         preco: 7,
         secao: 'Panificadora',
@@ -143,7 +143,7 @@ const produtos = [
     }
     ,
     {
-        id: 8,
+        id: 10,
         nome: 'Requeijão Cremoso',
         preco: 4,
         secao: 'Laticínio',
@@ -160,7 +160,7 @@ const produtos = [
     }
     ,
     {
-        id: 9,
+        id: 11,
         nome: 'Manteiga',
         preco: 4,
         secao: 'Laticínio',
