@@ -20,7 +20,7 @@ function listarProdutos(database, secao) {
 listarProdutos(produtos, secaoProdutos);
 
 function criarCardProduto(produto, index) {
-  const { nome, preco, secao, img } = produto;
+  const { nome, preco, secao, img, componentes, id} = produto;
 
   let secaoProdutos = document.querySelector(".secaoProdutos");
   let tagLi = document.createElement("li");
@@ -30,6 +30,8 @@ function criarCardProduto(produto, index) {
   let tagPreco = document.createElement("p");
   let tagBtn = document.createElement("button");
   let tagDiv = document.createElement("div");
+  let tagCompo = document.createElement("h4");
+
 
   tagImg.src = img;
   tagImg.alt = nome;
@@ -37,10 +39,11 @@ function criarCardProduto(produto, index) {
   tagPreco.innerHTML = `R$${preco}`;
   tagSpan.innerText = secao;
   tagBtn.innerText = "Comprar";
-  tagBtn.id = index
+  tagBtn.id = id
+  tagCompo.innerText = componentes
   
   secaoProdutos.append(tagLi);
-  tagLi.append(tagImg, tagTitulo, tagSpan, tagDiv);
+  tagLi.append(tagImg, tagTitulo, tagSpan, tagCompo, tagDiv);
   tagDiv.append(tagPreco, tagBtn);
 
   return tagLi;
@@ -77,7 +80,6 @@ function criarCard (produto, index) {
   tagPreco.innerHTML = `<strong>R$${preco}</strong>`
   tagSecao.innerText = secao
   tagRemocao.innerText = "X"
-  
   tagRemocao.id = index
     
   tagLi.append(tagImg, tagNome, tagPreco, tagRemocao)
@@ -110,6 +112,7 @@ function adicionarCarrinho(produto) {
 }
 
 
+
 function removerItens (event) {
 
   let btnRemover = event.target
@@ -117,14 +120,12 @@ function removerItens (event) {
   if (btnRemover.tagName === 'BUTTON') {
 
     let index = btnRemover.id
-console.log(btnRemover)
     carrinhoUl.innerHTML = ""
 
     arrayVazio.splice(index, 1)
     listarCarrinho(arrayVazio)
     carrinhoInfo(arrayVazio)
   }
-
 }
 carrinhoUl.addEventListener("click", removerItens)
 
@@ -140,6 +141,7 @@ let imgFodas = document.createElement("img")
 
   if (arrayVazio.length == 0) {
     carrinhoUl.appendChild(divVazio)
+    carrinhoInfo(arrayVazio)
   }
 
 function carrinhoInfo(arr) {
@@ -189,8 +191,9 @@ function buscarItem(data, pesquisaUsuario) {
     let pesquisa = pesquisaUsuario.toLowerCase();
     let nomeProduto = elem.nome.toLowerCase();
     let departamento = elem.secao.toLowerCase();
+    let categoria = elem.categoria.toLowerCase();
 
-    if (nomeProduto.includes(pesquisa) || departamento.includes(pesquisa)) {
+    if (nomeProduto.includes(pesquisa) || departamento.includes(pesquisa) || categoria.includes(pesquisa)) {
       newArray.push(elem);
     }
   });

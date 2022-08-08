@@ -21,7 +21,13 @@ const produtos = [
         preco: 4,
         secao: 'Panificadora',
         categoria: 'Pães',
-        img: './src/img/croissant.jpeg'
+        img: './src/img/croissant.jpeg',
+        componentes: [
+            'Potássio',
+            'Vitamina B6',
+            'Vitamina C',
+            'Folatos'
+        ]
     },
     {
         id: 2,
@@ -61,7 +67,13 @@ const produtos = [
         preco: 4,
         secao: 'Panificadora',
         categoria: 'Pães',
-        img: './src/img/croissant.jpeg'
+        img: './src/img/croissant.jpeg',
+        componentes: [
+            'Potássio',
+            'Vitamina B6',
+            'Vitamina C',
+            'Folatos'
+        ]
     },
     {
         id: 5,

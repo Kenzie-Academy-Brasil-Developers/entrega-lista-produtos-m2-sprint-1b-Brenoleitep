@@ -138,10 +138,14 @@ main {
 
 .containerListaProdutos .secaoProdutos li {
     border-radius: 8px;
-    transition: ease-in-out 0.4s;
-    max-width: 100vw;
-    margin-bottom: 30px;
-    justify-content: center;
+        display: flex;
+        transition: ease-in-out 0.4s;
+        max-width: 100vw;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+        align-content: space-between;
+        align-items: baseline;
+        justify-content: space-between;
 }
 
 .containerListaProdutos ul li:hover {
@@ -205,6 +209,7 @@ main {
 
 .containerListaProdutos ul li div {
     display: flex;
+    min-width: 100%;
     justify-content: space-between;
 }
 
@@ -363,10 +368,6 @@ main {
         border-radius: 10px;
         text-align: center;
     }
-    
-    .carrinho__ul li p {
-
-    }
 }
 
 @media (min-width: 1024px) {
@@ -387,7 +388,10 @@ main {
     .containerVitrine {
         flex-direction: column;
     }
-
+    .containerListaProdutos {
+        min-width: 75%;
+        min-height: 100vh;
+    }
     .containerListaProdutos ul {
         max-width: 95%;
         flex-wrap: wrap;
@@ -399,15 +403,12 @@ main {
     }
 
     .containerListaProdutos ul li img {
-        width: 30vw;
+        width: 100%;
     }
 
 }
 
 @media (min-width: 1440px) {
-
-   
-
 
     .filtersContainer {
         max-width: 100%;
@@ -434,6 +435,7 @@ main {
     }
     .containerListaProdutos {
         min-width: 75%;
+        min-height: 100vh;
     }
     .containerListaProdutos .secaoProdutos {
 
